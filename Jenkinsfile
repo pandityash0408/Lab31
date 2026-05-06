@@ -10,6 +10,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 git branch: 'main',
+                    credentialsId: 'github-token',
                     url: 'https://github.com/pandityash0408/Lab31.git'
             }
         }
